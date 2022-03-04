@@ -1,6 +1,6 @@
-import { ICreateCategoryDTO } from '../dtos/ICreateCategoryDTO';
-import { Category } from '../modules/cars/model/Category';
-import { ICategoriesRepository } from './ICategoriesRepository';
+import { ICreateCategoryDTO } from '../../dtos/ICreateCategoryDTO';
+import { Category } from '../../model/Category';
+import { ICategoriesRepository } from '../ICategoriesRepository';
 
 class MsSqlCategoriesRepository implements ICategoriesRepository {
   create({ name, description }: ICreateCategoryDTO): void {

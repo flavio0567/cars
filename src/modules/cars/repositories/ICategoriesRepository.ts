@@ -1,10 +1,10 @@
 import { ICreateCategoryDTO } from '../dtos/ICreateCategoryDTO';
-import { Category } from '../modules/cars/model/Category';
+import { Category } from '../model/Category';
 
 interface ICategoriesRepository {
-  create({ name, description }: ICreateCategoryDTO): void;
+  create(data: ICreateCategoryDTO): void;
   list(): Category[];
-  findByName(name: string): Category;
+  findByName(name: string): Category | undefined;
 }
 
 export { ICategoriesRepository };
